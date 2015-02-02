@@ -5,14 +5,13 @@
 
 2.  What is the output of the ``cal`` command?
 
-        multi
-        line
-        answer
+    >    Answer: The call commans displays a calendar and the date of Easter
+
 
 # Homework Questions
 
 1.  What is the ``grep``command?
-    >   answer
+    >   Answer: The "grep" command print lines matching a pattern
 
 2.  What is a *makefile*?
     >   answer
