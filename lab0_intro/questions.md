@@ -1,7 +1,7 @@
 # Warmup Questions
 
 1.  What is the clone url of this repository?
-    >   Answer: https://github.com/lufrodriguezca/lab_vision
+    >   Answer: https://github.com/diego0020/lab_vision
 
 2.  What is the output of the ``cal`` command?
 
