@@ -23,15 +23,10 @@
     >   Answer: The ``-prune`` option of the ``find`` command exclude a directory within a directory tree. The following example will show all the files at the same level except than the file current directory: ``find . ! -name . -prune``
 
 5.  Where is the file ``xxxxxx``
-    >   Answer: 
-	``find -name xxxxxx``
-	Note: On this option ``xxxxxx = filename.type``
+    >   Answer: ``find -name 'xxxxxx'``
 
 6.  How many files with ``gnu`` in its name are in ``dir`` and ``/usr/src``
-    >   Answer: 
-	``find ~/dir  -name '*gnu*' | wc -l``
-	
-	``find /usr/src -name '*gnu*' | wc -l``
+    >   Answer: ``find ~/dir  -name '*gnu*' | wc -l`` and ``find /usr/src -name '*gnu*' | wc -l``
 
 7.  How many files contain ``gpl`` inside in ``dir``
     >   answer
