@@ -58,7 +58,7 @@
 	> Answer: Code on the script: 
 	``#!/bin/bash
 	cd ~
-	$(find imagesFolder/  -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 15 > dupes.txt)
+	$(find folderWithImagesToCheck/  -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 15 > dupes.txt)
 	wc -l dupes.txt
 	cat dupes.txt``
 	Part of the code was taken from: http://www.linux.com/learn/tutorials/774031-how-to-sort-and-remove-duplicate-photos-in-linux
