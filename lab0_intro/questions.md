@@ -63,5 +63,7 @@
 	cat dupes.txt``
 	Part of the code was taken from: http://www.linux.com/learn/tutorials/774031-how-to-sort-and-remove-duplicate-photos-in-linux
 16. How many unique images are in the ``sipi_images`` folder?
-    >   answer
+    >   Answer: ``find sipi_images/  -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 15 > dupes.txt`` enter ``wc -l dupes.txt``
+
+
     
