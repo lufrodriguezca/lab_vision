@@ -35,22 +35,22 @@
     >   Answer: ``whatis cut`` generates the following output: ``remove sections from each line of a file or files``
 
 9.  What does the ``wget`` command do?
-    >   Answer: ``wget`` command is a non interactive network downloades. It supports HTTP, HTTPS, FTP protocols and HTTP proxies
+    >   Answer: ``wget`` command is a non interactive network downloader. It supports HTTP, HTTPS, FTP protocols and HTTP proxies
 
 10.  What does the ``diff`` command do?
-    >   answer
+    >   answer: the ``diff`` command compares files line by line
 
 11.  How many users exist in *Guitaca*?
-    >   answer
+    >   Answer: 
 
 12. What command will produce a table of Users and Shells sorted by shell (tip: using ``cut`` and ``sort``)
-    >   answer
+    >   Answer:
 
 13. What command will produce the number of users with shell ``/sbin/nologin`` (tip: using ``grep`` and ``wc``)
-    >   answer
+    >   Answer:
 
 14.  What is the name of the linux distribution running on *Guitaca*?
-    >   answer
+    >   Answer: linux gnome
 
 15. Create a script for finding duplicate images based on their content (tip: hash or checksum)
     You may look in the internet for ideas, but please indicate the source of any code you use
