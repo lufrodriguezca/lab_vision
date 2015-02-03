@@ -29,13 +29,13 @@
     >   Answer: ``find ~/dir  -name '*gnu*' | wc -l`` and ``find /usr/src -name '*gnu*' | wc -l``
 
 7.  How many files contain ``gpl`` inside in ``dir``
-    >   answer
+    >   Answer: ``cd dir `` (enter key) ``grep -l "gpl" * | wc -l``
 
 8.  What does the ``cut`` command do?
-    >   answer
+    >   Answer: ``whatis cut`` generates the following output: ``remove sections from each line of a file or files``
 
 9.  What does the ``wget`` command do?
-    >   answer
+    >   Answer: ``wget`` command is a non interactive network downloades. It supports HTTP, HTTPS, FTP protocols and HTTP proxies
 
 10.  What does the ``diff`` command do?
     >   answer
