@@ -55,7 +55,13 @@
 15. Create a script for finding duplicate images based on their content (tip: hash or checksum)
     You may look in the internet for ideas, but please indicate the source of any code you use
     Save this script as ``find_duplicates.sh`` in this directory and commit your changes to github
-
+	Answer: Code on the script: 
+	``#!/bin/bash
+	cd ~
+	$(find imagesFolder/  -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 15 > dupes.txt)
+	wc -l dupes.txt
+	cat dupes.txt``
+	Part of the code was taken from: http://www.linux.com/learn/tutorials/774031-how-to-sort-and-remove-duplicate-photos-in-linux
 16. How many unique images are in the ``sipi_images`` folder?
     >   answer
     
