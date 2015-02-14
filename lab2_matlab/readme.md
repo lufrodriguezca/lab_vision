@@ -99,7 +99,7 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
-    >   Answer: [imshow] command is more complete than the [image] command. It displayed the image in a Handle Graphics® figure, where I is a grayscale, RGB (truecolor), or binary image. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The [image] command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command [image] the images showed like "red"
+    >   Answer: " "imshow" " command is more complete than the [image] command. It displayed the image in a Handle Graphics® figure, where the image is a grayscale, RGB (truecolor), or binary. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The [image] command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command [image] the images showed like "red"
 
 
 ## Writing Images
