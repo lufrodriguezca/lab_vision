@@ -108,14 +108,18 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
+
     >   Answer: 
+
 	```bash
 	E=imread('4.2.04.tiff');
 	imwrite(E,'mujer.png');
 	imwrite(E,'mujer.jpg');
 	```
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+
     >   Answer:
+
 	```bash
 	code here
 	```
