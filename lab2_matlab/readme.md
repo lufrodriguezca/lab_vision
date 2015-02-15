@@ -165,11 +165,23 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
     >   Answer:	
 	
-	Parameters introduced were: Gaussian filter m=0.02 and v=0.01, 
+	Parameters introduced were: 
+
+	Gaussian filter m=0.02, v=0.01
+
+	```bash
+	J=imnoise(E, 'gaussian',0.02);
+	```
+	Localvar filter v=0.05*rand(size(E))
+
+	```bash
+	J=imnoise(E, 'localvar',0.05*rand(size(E)));
+	```
 3.  Try saving noisy images as jpg, what happens?
 
     >   Answer:
-	Gaussian filter: When was saved as jpg the image got a little bit less sharper. 
+
+	I saved the images as .tif and .jpg. The main observation was that when image was saved as jpg it got a little bit less sharper. 
 
 ### Median filter
 
