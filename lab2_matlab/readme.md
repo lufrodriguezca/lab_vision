@@ -169,7 +169,6 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 3.  Try saving noisy images as jpg, what happens?
 
     >   Answer:
-	
 	Gaussian filter: When was saved as jpg the image got a little bit less sharper. 
 
 ### Median filter
