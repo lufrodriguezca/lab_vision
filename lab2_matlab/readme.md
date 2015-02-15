@@ -177,11 +177,28 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 	```bash
 	J=imnoise(E, 'localvar',0.05*rand(size(E)));
 	```
+	Poisson filter
+
+	```bash
+	J=imnoise(E, 'poisson');
+	```
+
+	Salt & pepper filter d=0.02
+
+	```bash
+	J=imnoise(E, 'salt & pepper',0.02);
+	```
+	Speckle filter v=0.2
+
+	```bash
+	J=imnoise(E, 'speckle',0.2);
+	```
+
 3.  Try saving noisy images as jpg, what happens?
 
     >   Answer:
 
-	I saved the images as .tif and .jpg. The main observation was that when image was saved as jpg it got a little bit less sharper. 
+	I saved the images as .tif and .jpg. The main observation was that when image was saved as jpg it got a little bit less noisy. 
 
 ### Median filter
 
