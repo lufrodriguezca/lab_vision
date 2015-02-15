@@ -108,7 +108,17 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
+	>Answer: 
+	```bash
+	E=imread('4.2.04.tiff');
+	imwrite(E,'mujer.png');
+	imwrite(E,'mujer.jpg');
+	```
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+	>Answer:
+	```bash
+	code here
+	```
 
 ## Matlab and the shell
 
@@ -149,9 +159,10 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 
 1.  Read the manual page
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
+	> Answer: Parameters introduced were: Gaussian filter m=0.02 and v=0.01, 
 3.  Try saving noisy images as jpg, what happens?
 
-    > Answer
+	> Answer:Gaussian filter: When was saved as jpg the image got a little bit less sharper. 
 
 ### Median filter
 
