@@ -257,7 +257,17 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
 
-    > Answer
+    > Answer: I have installed MATLAB 2012b so I don't have the imsharper command. Instead of it I used the command unsharp. I observed that the image got sharper edges. I add the result to the repository. The code used is as follows:
+
+	```
+	im = imread('5.1.12.tiff');
+	alpha = 0.2; % Controls shape of filter - Between [0,1]
+	f = fspecial('unsharp', alpha); 
+	out = imfilter(im, f);
+	figure;
+	subplot(2,1,1); imshow(im); title('Original');
+	subplot(2,1,2); imshow(out); title('Sharpened');
+	```
 
 2.  Sharp a blurred image. What do you notice?
 
