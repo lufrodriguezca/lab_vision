@@ -214,7 +214,7 @@ These filters can be applied to a an image in order to remove noise.
 3.  Try different sizes for the filters
 4.  Which filter works best for salt & pepper noise?
 
-    > Answer
+    > Answer: The best filter was median filter 3x3 
 
 For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html
 
@@ -227,9 +227,7 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Answer: The main difference is that with size 3 x 3 on both filters and sigma = 0.7 on gaussian filter I observe a more soft transformation using gaussian filter, when I increased sigma to 0.9 the image was more softer. Also I tried gaussian with size 5  x 5 and mean with 3 x 3 and I observed
-
-I added the images to this repository. 
+    > Answer: The main difference is that with size 3 x 3 on both filters and sigma = 0.7 on gaussian filter I observe a more soft transformation using gaussian filter, when I increased sigma to 0.9 the image was more softer. Also I tried gaussian with size 5 x 5, sigma = 0,7 and mean filter with 5 x 5 and I observed that the gaussian filter under this conditions was more sharper than the mean filter. I added the images to this repository. 
 
 ### Sharpen
 
