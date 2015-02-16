@@ -234,7 +234,8 @@ These filters can be applied to a an image in order to remove noise.
 	for c = 1 : 3
     		img_filtered(:, :, c) = medfilt2(img_noisy(:, :, c), [3, 3]);
 	end
-	figure; imshow(img_filtered);```
+	figure; imshow(img_filtered);
+```
 
 
 For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html

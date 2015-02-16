@@ -215,13 +215,12 @@ These filters can be applied to a an image in order to remove noise.
 4.  Which filter works best for salt & pepper noise?
 
     > Answer: The best filter was median filter 3x3. Code used:
-	```
+```
 	I = imread('4.2.07.tiff');
 	P=imnoise(I, 'salt & pepper', 0.02);
 	h=fspecial('average', [3 3])
 	J=imfilter(P,h);
 	imshow(J);
-
 
 	% cargar imagen
 	img = imread('4.2.07.tiff');
@@ -235,8 +234,7 @@ These filters can be applied to a an image in order to remove noise.
 	for c = 1 : 3
     		img_filtered(:, :, c) = medfilt2(img_noisy(:, :, c), [3, 3]);
 	end
-	figure; imshow(img_filtered);
-    ```
+	figure; imshow(img_filtered);```
 
 
 For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html
