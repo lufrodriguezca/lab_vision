@@ -99,7 +99,9 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
-    >   Answer: ```imshow``` command is more complete than the ```image``` command. It displayed the image in a Handle Graphics® figure, where the image is a grayscale, RGB (truecolor), or binary. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The ```image``` command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command ```image``` the images showed like "orange"
+    >   Answer: 
+
+	```imshow``` command is more complete than the ```image``` command. It displayed the image in a Handle Graphics® figure, where the image is a grayscale, RGB (truecolor), or binary. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The ```image``` command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command ```image``` the images showed like "orange"
 
 
 ## Writing Images
@@ -225,7 +227,7 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Answer
+    > Answer: The main difference is that with size 3 x 3 on both filters and sigma = 0.7 on gaussian filter I observe a more soft transformation using gaussian filter, when I increased sigma to 0.9 the image was more softer. Also I tried gaussian with size 5 x 5, sigma = 0,7 and mean filter with 5 x 5 and I observed that the gaussian filter under this conditions was more sharper than the mean filter. I added the images to this repository. 
 
 ### Sharpen
 

@@ -99,7 +99,9 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
-    >   Answer: ```imshow``` command is more complete than the ```image``` command. It displayed the image in a Handle Graphics® figure, where the image is a grayscale, RGB (truecolor), or binary. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The ```image``` command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command ```image``` the images showed like "orange"
+    >   Answer: 
+
+	```imshow``` command is more complete than the ```image``` command. It displayed the image in a Handle Graphics® figure, where the image is a grayscale, RGB (truecolor), or binary. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The ```image``` command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command ```image``` the images showed like "orange"
 
 
 ## Writing Images
@@ -108,14 +110,18 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
-	>Answer: 
+
+    >   Answer: 
+
 	```bash
 	E=imread('4.2.04.tiff');
 	imwrite(E,'mujer.png');
 	imwrite(E,'mujer.jpg');
 	```
 3.  Write a matlab function that takes the path of an image and converts it to jpg
-	>Answer:
+
+    >   Answer:
+
 	```bash
 	code here
 	```
@@ -159,10 +165,42 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 
 1.  Read the manual page
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
-	> Answer: Parameters introduced were: Gaussian filter m=0.02 and v=0.01, 
+    >   Answer:	
+	
+	Parameters introduced were: 
+
+	Gaussian filter m=0.02, v=0.01
+
+	```bash
+	J=imnoise(E, 'gaussian',0.02);
+	```
+	Localvar filter v=0.05*rand(size(E))
+
+	```bash
+	J=imnoise(E, 'localvar',0.05*rand(size(E)));
+	```
+	Poisson filter
+
+	```bash
+	J=imnoise(E, 'poisson');
+	```
+
+	Salt & pepper filter d=0.02
+
+	```bash
+	J=imnoise(E, 'salt & pepper',0.02);
+	```
+	Speckle filter v=0.2
+
+	```bash
+	J=imnoise(E, 'speckle',0.2);
+	```
+
 3.  Try saving noisy images as jpg, what happens?
 
-	> Answer:Gaussian filter: When was saved as jpg the image got a little bit less sharper. 
+    >   Answer:
+
+	I saved the images as .tif and .jpg. The main observation was that when image was saved as jpg it got a little bit less noisy. 
 
 ### Median filter
 
@@ -189,7 +227,9 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Answer
+    > Answer: The main difference is that with size 3 x 3 on both filters and sigma = 0.7 on gaussian filter I observe a more soft transformation using gaussian filter, when I increased sigma to 0.9 the image was more softer. Also I tried gaussian with size 5  x 5 and mean with 3 x 3 and I observed
+
+I added the images to this repository. 
 
 ### Sharpen
 
