@@ -257,7 +257,7 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
 
-    > Answer: I have installed MATLAB 2012b so I don't have the imsharper command. Instead of it I used the command unsharp. I observed that the image got sharper edges. I add the result to the repository. The code used is as follows:
+    > Answer: I have installed MATLAB 2012b so I don't have the imsharper command. Instead of it I used the command unsharp. I observed that the image got sharper edges. I added the result to the repository. The code used is following:
 
 	```
 	im = imread('5.1.12.tiff');
@@ -271,7 +271,7 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 2.  Sharp a blurred image. What do you notice?
 
-    > Answer
+    > Answer: The image got more sharper despite the previous blur. copy on the repository
 
 ### Edge detection
 
@@ -286,7 +286,61 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 1.  Try applying this filters
 2.  What is the difference between prewitt and sobel?
 
-    > Answer
+    > Answer: The sobel filter consists on two 3x3 convolution kernels, one trasposed with the other. The rernels are applied to the image separately and later are combined to find the magnitude of the gradient and orientation.
+
+The code used is the following (taken from: http://bababouncer.blogspot.com/2012/10/matlab-code-for-edge-detection-robert.html and http://angeljohnsy.blogspot.com/2011/12/sobel-edge-detection.html):
+
+	```
+	%PREWITT
+	a=imread('5.3.01.tiff');
+ 	b=im2double(a);
+	[m,n]=size(a);
+
+ 	N(1:m,1:n)=0
+	for i=1:m-2;
+    		for j=1:m-2;
+        		N(i,j)=-1*b(i,j)-1*b(i,j+1)-1*b(i,j+2)+0+0+0+1*b(i+2,j)+1*b(i+2,j+1)+1*b(i+2,j+2);
+    		end;
+	end;
+	O(1:m,1:n)=0
+	for i=1:m-2;
+    		for j=1:m-2;
+        		O(i,j)=-1*b(i,j)+0+1*b(i,j+2)-1*b(i+2,j)+0+1*b(i+1,j+2)-1*b(i+2,j)+0+1*b(i+2,j+2);
+    		end;
+	end;
+	figure;
+	subplot(2,2,1)
+	imshow(N)
+	title('Prewit    Gx');
+	subplot(2,2,2)
+	imshow(O)
+	title('Prewit    Gy');
+	Z=N+O;
+	subplot(2,2,3)
+	imshow(Z)
+	title('Prewit    Gx+Gy');
+	subplot(2,2,4)
+	imshow(b)
+	title('Original Image');
+
+	%SOBEL
+
+	C=double(a);
+	for i=1:size(C,1)-2
+    		for j=1:size(C,2)-2
+        		%Sobel mask for x-direction:
+        		Gx=((2*C(i+2,j+1)+C(i+2,j)+C(i+2,j+2))-(2*C(i,j+1)+C(i,j)+C(i,j+2)));
+        		%Sobel mask for y-direction:
+        		Gy=((2*C(i+1,j+2)+C(i,j+2)+C(i+2,j+2))-(2*C(i+1,j)+C(i,j)+C(i+2,j)));
+      
+ 			%The gradient of the image
+        		%a(i,j)=abs(Gx)+abs(Gy);
+        		a(i,j)=sqrt(Gx.^2+Gy.^2);
+    		end
+	end
+	figure,imshow(a); title('Sobel gradient');
+	```
+
 
 More sophisticated methods for finding edges can be found in the following pages
     -   http://www.mathworks.com/discovery/edge-detection.html
