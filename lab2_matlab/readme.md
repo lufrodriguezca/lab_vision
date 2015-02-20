@@ -123,7 +123,14 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
     >   Answer:
 
 	```bash
-	code here
+	function salida = cambioFormatoImagen(x)
+	   y = imread(x);
+	   imwrite(y,'mujerb.jpg');
+	   imshow(y);
+	end
+
+	w='4.2.04.tiff';
+	cambioFormatoImagen(w);
 	```
 
 ## Matlab and the shell

@@ -101,7 +101,7 @@ The following commands can be used for displaying images
 
     >   Answer: 
 
-	```imshow``` command is more complete than the ```image``` command. It displayed the image in a Handle Graphics® figure, where the image is a grayscale, RGB (truecolor), or binary. For binary images, imshow displays pixels with the value 0 (zero) as black and 1 as white. The ```image``` command created an image graphics object by interpreting each element in a matrix as an index into the figure's colormap or directly as RGB values, depending on the data specified. The differences oberved where that under the command ```image``` the images showed like "orange"
+	```imshow``` command is more complete than ```image```. The first one is a processing toolbox command that allows to manage the matrix as an image and assumes the elements as pixels intensities, it allows more control. The ```image``` command allows to manage and see the matrix just as a matrix of numbers.
 
 
 ## Writing Images
@@ -410,6 +410,8 @@ color spaces.
 	subplot(2,2,1), subimage(rgbImage);
 	subplot(2,2,2), subimage(ycbcrImage);
 
+	%lab
+	```
 6.  Save all the mosaics in your github repository
 
 ## Pyramids
