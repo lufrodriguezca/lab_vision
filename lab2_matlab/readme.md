@@ -425,13 +425,24 @@ The [impyramid](http://www.mathworks.com/help/images/ref/impyramid.html) functio
 
 1.  Read the manual page
 2.  Create a four level pyramid from the ``5.1.12`` clock  image
+	```
+	I0 = imread('cameraman.tif');
+	I1 = impyramid(I0, 'reduce');
+	I2 = impyramid(I1, 'reduce');
+	I3 = impyramid(I2, 'reduce');
+  
+	imshow(I0)
+	figure, imshow(I1)
+	figure, imshow(I2)
+	figure, imshow(I3)	
+	```
 3.  At what level does the people in the picture dissappear?
 
-    >   Answer
+    >   Answer: The people became diffuse at level 2 but dissappear at level 3
     
 4.  At what level does the numbers in the clock disappear?
 
-    >   Answer
+    >   Answer: At level 3 are impossible to see
 
 ## Template Matching
 
