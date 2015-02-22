@@ -128,7 +128,6 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 		[pathstr,name,ext] = fileparts(x);
 		concatena=strcat(name,'.jpg');
 		imwrite(y,concatena);
-
 	end
 	```
 
