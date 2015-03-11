@@ -76,4 +76,4 @@ Finally, upload to the repository
 - The pyramid
 - The code you used
 
-**DUE**: 3 /3 /2015 ; 8:00 a.m. 
+**DUE**: 3 /3 /2015 ; 8:00 a.m
